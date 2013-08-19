@@ -1,7 +1,10 @@
 {
   "name": "backbone.scrolltop_view",
   "version": "0.0.0",
-  "main": "dist/backbone.scrolltop_view.js",
+  "main": [
+    "dist/backbone.scrolltop_view.js",
+    "dist/style.css"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
