@@ -32,7 +32,7 @@
       this.options = _.defaults(this.options, this.defaults);
       this.$el.css('bottom', this.options.bottom);
       this.$el.css('right', this.options.right);
-      this.$body = $('body');
+      this.$body = $('body, html');
       return this.onScroll();
     };
 
@@ -42,9 +42,10 @@
 
     ScrollTopView.prototype.scrollTop = function(e) {
       e.preventDefault();
-      return this.$body.animate({
+      this.$body.animate({
         scrollTop: 0
       }, 'fast');
+      return false;
     };
 
     ScrollTopView.prototype.onScroll = function() {

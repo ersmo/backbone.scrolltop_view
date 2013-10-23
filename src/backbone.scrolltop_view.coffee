@@ -16,7 +16,7 @@ class Backbone.ScrollTopView extends Backbone.View
     @options = _.defaults @options, @defaults
     @$el.css 'bottom', @options.bottom
     @$el.css 'right', @options.right
-    @$body = $('body')
+    @$body = $('body, html')
     @onScroll()
 
   render: =>
@@ -28,6 +28,7 @@ class Backbone.ScrollTopView extends Backbone.View
       scrollTop: 0
     ,
       'fast'
+    false
 
   onScroll: =>
     $doc = $(document)
